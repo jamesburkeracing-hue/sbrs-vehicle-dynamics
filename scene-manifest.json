@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "package": "SBRS Vehicle Dynamics Official Scenes",
+  "deploymentBaseUrl": "https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/",
+  "deploymentStatus": "deployed-github-pages",
+  "posterStatus": "awaiting-post-change-browser-capture",
+  "entryPoint": "Vehicle_Dynamics_Teaching_Tool_OFFLINE.html",
+  "linkTarget": "new-browser-tab",
+  "dependencies": [
+    "physicsValidation.js",
+    "decal-geometry.bundle.js",
+    "model_assets/rss_formula_rss_4_skipbarber_native_uv_browser.glb",
+    "model_assets/skins/skip_barber_edgar_chassis.png",
+    "model_assets/skins/skip_barber_sebastian_livery.png",
+    "model_assets/skins/skip_barber_school_logo.png"
+  ],
+  "scenes": [
+    {
+      "id": "vd-01",
+      "title": "The Car Is a Moving Load Platform",
+      "query": "?scene=vd-01&present=1&instructor=1",
+      "hostedUrlTemplate": "https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/Vehicle_Dynamics_Teaching_Tool_OFFLINE.html?scene=vd-01&present=1&instructor=1",
+      "poster": "lesson_captures/powerpoint-official-scenes/post-change/vd-01.png"
+    },
+    {
+      "id": "vd-02",
+      "title": "See the Four Contact Patches Through the Road",
+      "query": "?scene=vd-02&present=1&instructor=1",
+      "hostedUrlTemplate": "https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/Vehicle_Dynamics_Teaching_Tool_OFFLINE.html?scene=vd-02&present=1&instructor=1",
+      "poster": "lesson_captures/powerpoint-official-scenes/post-change/vd-02.png"
+    },
+    {
+      "id": "vd-03",
+      "title": "Braking Moves Load Forward",
+      "query": "?scene=vd-03&present=1&instructor=1",
+      "hostedUrlTemplate": "https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/Vehicle_Dynamics_Teaching_Tool_OFFLINE.html?scene=vd-03&present=1&instructor=1",
+      "poster": "lesson_captures/powerpoint-official-scenes/post-change/vd-03.png"
+    },
+    {
+      "id": "vd-04",
+      "title": "Throttle Moves Load Rearward",
+      "query": "?scene=vd-04&present=1&instructor=1",
+      "hostedUrlTemplate": "https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/Vehicle_Dynamics_Teaching_Tool_OFFLINE.html?scene=vd-04&present=1&instructor=1",
+      "poster": "lesson_captures/powerpoint-official-scenes/post-change/vd-04.png"
+    },
+    {
+      "id": "vd-05",
+      "title": "Brake Plus Turn Changes the Job",
+      "query": "?scene=vd-05&present=1&instructor=1",
+      "hostedUrlTemplate": "https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/Vehicle_Dynamics_Teaching_Tool_OFFLINE.html?scene=vd-05&present=1&instructor=1",
+      "poster": "lesson_captures/powerpoint-official-scenes/post-change/vd-05.png"
+    },
+    {
+      "id": "vd-06",
+      "title": "Throttle Plus Turn Can Exceed What the Rear Tires Can Accept",
+      "query": "?scene=vd-06&present=1&instructor=1",
+      "hostedUrlTemplate": "https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/Vehicle_Dynamics_Teaching_Tool_OFFLINE.html?scene=vd-06&present=1&instructor=1",
+      "poster": "lesson_captures/powerpoint-official-scenes/post-change/vd-06.png"
+    }
+  ]
+}
