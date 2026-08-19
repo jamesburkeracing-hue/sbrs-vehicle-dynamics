@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="ContentApp">
+  <Id>02c96963-a8c7-498a-9307-17624869a5af</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Skip Barber Racing School</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="SBRS Vehicle Dynamics"/>
+  <Description DefaultValue="PowerPoint content add-in for the centrally hosted SBRS Vehicle Dynamics teaching application."/>
+  <IconUrl DefaultValue="https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/powerpoint-addin-test/powerpoint-addin/src/icon.png"/>
+  <SupportUrl DefaultValue="https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/powerpoint-addin-test/powerpoint-addin/src/content.html"/>
+  <AppDomains>
+    <AppDomain>https://jamesburkeracing-hue.github.io</AppDomain>
+    <AppDomain>https://appsforoffice.microsoft.com</AppDomain>
+  </AppDomains>
+  <Hosts><Host Name="Presentation"/></Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/powerpoint-addin-test/powerpoint-addin/src/content.html"/>
+    <RequestedWidth>960</RequestedWidth>
+    <RequestedHeight>540</RequestedHeight>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
