@@ -129,7 +129,7 @@
       const params = new URLSearchParams(root.location.search);
       const stored = readState(root.localStorage, key);
       const assignedScene = readAssignedScene(office);
-      const setupMode = params.get("setup") === "1" || !assignedScene;
+      let setupMode = params.get("setup") === "1" || !assignedScene;
       const requestedScene = setupMode ? configuredScene(params.get("scene")) : null;
       let state = {
         scene: requestedScene || assignedScene || config.defaultScene,
@@ -152,9 +152,13 @@
       populate(vehicleSelect, config.vehicles);
       sceneSelect.value = state.scene;
       vehicleSelect.value = state.vehicle;
-      sceneSelect.disabled = !setupMode;
-      saveAssignment.hidden = !setupMode;
-      document.body.dataset.setupMode = setupMode ? "true" : "false";
+      function applyMode() {
+        sceneSelect.disabled = !setupMode;
+        saveAssignment.hidden = !setupMode;
+        document.body.dataset.setupMode = setupMode ? "true" : "false";
+      }
+
+      applyMode();
       version.textContent = revision;
 
       function setStatus(text, level) {
@@ -177,7 +181,16 @@
       vehicleSelect.addEventListener("change", updateSelection);
       saveAssignment.addEventListener("click", function () {
         saveAssignedScene(office, state.scene, function (saved) {
-          setStatus(saved ? "Slide scene assignment saved" : "Unable to save slide scene assignment", saved ? "ready" : "error");
+          if (!saved) {
+            setStatus("Unable to save slide scene assignment", "error");
+            return;
+          }
+          setupMode = false;
+          const classroomUrl = new URL(root.location.href);
+          classroomUrl.searchParams.delete("setup");
+          root.history.replaceState(root.history.state, "", classroomUrl);
+          applyMode();
+          setStatus("Slide scene assignment saved", "ready");
         });
       });
       replay.addEventListener("click", function () {
@@ -205,13 +218,11 @@
       });
       root.addEventListener("pageshow", function () {
         const restored = readState(root.localStorage, key);
-        sceneSelect.value = restored.scene;
         vehicleSelect.value = restored.vehicle;
       });
       document.addEventListener("visibilitychange", function () {
         if (!document.hidden) {
           const restored = readState(root.localStorage, key);
-          sceneSelect.value = restored.scene;
           vehicleSelect.value = restored.vehicle;
         }
       });
@@ -228,8 +239,7 @@
     };
 
     if (root.Office && typeof root.Office.onReady === "function") {
-      root.Office.onReady().then(mount, mount);
-      root.setTimeout(mount, 1500);
+      root.Office.onReady().then(mount);
     } else {
       window.addEventListener("DOMContentLoaded", mount, { once: true });
     }

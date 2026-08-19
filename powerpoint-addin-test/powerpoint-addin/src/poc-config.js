@@ -26,8 +26,10 @@
     ]),
     vehicles: Object.freeze([
       Object.freeze({ id: "f4", runtimeId: "f4", label: "F4" }),
-      Object.freeze({ id: "gtx", runtimeId: "gtx", label: "GTX" }),
-      Object.freeze({ id: "srx", runtimeId: "srx", label: "SRX" }),
+      // Keep the established runtime routes: `gtx` resolves to the Mustang
+      // asset and `srx` resolves to the SRX asset now presented as GTX.
+      Object.freeze({ id: "gtx", runtimeId: "gtx", label: "Mustang GT" }),
+      Object.freeze({ id: "srx", runtimeId: "srx", label: "GTX" }),
     ]),
     legacyVehicleAliases: Object.freeze({ gt: "gtx" }),
     runtimeFlags: Object.freeze({ present: "1", instructor: "1", embed: "1" }),
