@@ -6,7 +6,7 @@
   "use strict";
 
   // Replace this one placeholder when SBRS IT supplies the approved HTTPS host.
-  const PRODUCTION_BASE_URL = "https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/powerpoint-addin-test";
+  const PRODUCTION_BASE_URL = "https://YOUR-SBRS-HTTPS-ORIGIN.example";
 
   return Object.freeze({
     productionBaseUrl: PRODUCTION_BASE_URL,
@@ -32,6 +32,6 @@
       Object.freeze({ id: "srx", runtimeId: "srx", label: "GTX" }),
     ]),
     legacyVehicleAliases: Object.freeze({ gt: "gtx" }),
-    runtimeFlags: Object.freeze({ present: "1", instructor: "1", embed: "1" }),
+    runtimeFlags: Object.freeze({ present: "1", instructor: "1" }),
   });
 });
