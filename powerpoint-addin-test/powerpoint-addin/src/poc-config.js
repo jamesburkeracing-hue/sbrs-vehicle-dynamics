@@ -6,7 +6,7 @@
   "use strict";
 
   // Replace this one placeholder when SBRS IT supplies the approved HTTPS host.
-  const PRODUCTION_BASE_URL = "https://YOUR-SBRS-HTTPS-ORIGIN.example";
+  const PRODUCTION_BASE_URL = "https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/powerpoint-addin-test";
 
   return Object.freeze({
     productionBaseUrl: PRODUCTION_BASE_URL,
