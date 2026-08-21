@@ -6,6 +6,6 @@
   <IconUrl DefaultValue="https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/powerpoint-addin-test/powerpoint-addin/src/icon.png"/>
   <SupportUrl DefaultValue="https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/powerpoint-addin-test/powerpoint-addin/src/content.html"/>
   <AppDomains><AppDomain>https://jamesburkeracing-hue.github.io</AppDomain></AppDomains><Hosts><Host Name="Presentation"/></Hosts>
-  <DefaultSettings><SourceLocation DefaultValue="https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/powerpoint-addin-test/powerpoint-addin/src/content.html?scene=vd-01"/><RequestedWidth>960</RequestedWidth><RequestedHeight>540</RequestedHeight></DefaultSettings>
+  <DefaultSettings><SourceLocation DefaultValue="https://jamesburkeracing-hue.github.io/sbrs-vehicle-dynamics/powerpoint-addin-test/powerpoint-addin/src/content.html?scene=vd-01&amp;build=poc-h-20260821.1"/><RequestedWidth>960</RequestedWidth><RequestedHeight>540</RequestedHeight></DefaultSettings>
   <Permissions>ReadDocument</Permissions>
 </OfficeApp>
